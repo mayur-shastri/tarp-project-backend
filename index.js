@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-const textToSpeechRouter = require('./routes/textToSpeech');
+const googleCloudApiRouter = require('./routes/googleCloudApi');
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-app.use('/text-to-speech', textToSpeechRouter);
+app.use('/gcp', googleCloudApiRouter);
 
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000');
