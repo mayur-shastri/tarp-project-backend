@@ -56,7 +56,7 @@ router.post('/generate-text', async (req, res) => {
                 }
             ],
             generationConfig: {
-              maxOutputTokens: 100,
+              maxOutputTokens: 1000,
               temperature: 0.1,
             }
         });
